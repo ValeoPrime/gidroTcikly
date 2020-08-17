@@ -1,0 +1,92 @@
+.header__top
+    &-inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+        min-height: 120px
+        font-family: 'SFProDisplay-Bold', sans-serif;
+        font-weight: 700
+        .menu__list
+            .menu__item
+                display: inline-block
+            .menu__item + .menu__item
+                margin-left: 50px
+    .header__wrapper
+        display: flex
+        align-items: center
+        address
+            margin-right: 60px
+            width: 265px
+            padding-left: 30px
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                width: 30px
+                height: 30px
+                top: -10px
+                left: -0
+                background-image: url('../img/icons/adress.svg')
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: cover
+        .user__list
+            margin-right: 15px
+            display: flex
+            align-items: center
+        .user__list_item
+            padding-right: 10px
+        .basket
+            position: relative
+            &__num
+                position: absolute
+                width: 20px;
+                height: 20px;
+                right: -15px
+                bottom: -14px
+                background: $akcent
+                font-family: 'SFProDisplay-Medium', sans-serif;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 12px
+                color: #FFFFFF;
+                border-radius: 50%
+                display: flex
+                justify-content: center
+                align-items: center
+.header__bottom
+    margin-bottom: 78px
+.header__bottom_categories
+    display: flex
+    justify-content: space-around
+    background: #F0F0F4;
+    align-items: center
+    min-height: 53px
+    .header__bottom_listItem
+        text-transform: capitalize;
+        position: relative
+        .list__item-link
+            position: absolute  
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            padding: 15px 0 14px
+            &::before
+                content: ''
+                position: absolute
+                left: auto
+                right: 0
+                bottom: -3px
+                background-color: $akcent
+                width: 0
+                height: 3px
+                transition: all 0.3s
+        .list__item-link:hover
+            font-family: 'SFProDisplay-Semibold', sans-serif;
+            font-weight: 600;
+        .list__item-link:hover::before
+            right: auto
+            left: 0
+            width: 100%
+
+

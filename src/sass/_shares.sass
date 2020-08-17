@@ -1,0 +1,148 @@
+.shares__inner
+    display: flex
+    justify-content: space-between
+    .shares__slider
+        max-width: 870px
+        position: relative
+    .shares__slider-btn
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        background-color: transparent
+        border: none
+        margin: 0
+        padding: 0
+        cursor: pointer
+    .shares__slider-btnprev
+        left: 20px
+        z-index: 5
+    .shares__slider-btnnext
+        right: 20px
+    .slick-dots
+        position: absolute
+        bottom: 40px   
+        left: 50%
+        transform: translateX(-50%)
+        li
+            display: inline-block
+            padding: 0 5px
+        button
+            padding: 0
+            margin: 0
+            font-size: 0
+            width: 11px
+            height: 11px
+            border: 1px solid #FFFFFF;
+            background-color: transparent
+            border-radius: 50%
+            cursor: pointer
+        .slick-active
+            button
+                background-color: #FFFFFF;
+
+    .shares__card
+        max-width: 265px
+        border: 1px solid #CDCDCD;
+        border-radius: 3px;
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .shares__card_top
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            .shares__card-info
+                color: #ffffff
+                background-color: $akcent
+                font-family: 'SFProDisplay-Regular', sans-serif;
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                padding: 8px 20px
+                display: inline-block
+            .new-price
+                font-family: Barlow, sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 27px;
+                line-height: 32px;
+                color: $akcent
+                padding-right: 27px
+                position: relative
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 15px
+                    height: 18px
+                    bottom: 6px
+                    right: 5px
+                    background-image: url('../img/icons/rub_icon.png')
+                    background-repeat: no-repeat
+                    background-size: cover
+                    background-position: center center  
+            .old-price
+                font-family: Barlow, sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #C4C4C4;
+                text-align: right
+                padding-right: 15px
+                position: relative
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 60px
+                    height: 10px
+                    bottom: 2px
+                    left: 40px
+                    background-image: url('../img/icons/line.svg')
+                    background-repeat: no-repeat
+                    background-size: cover
+                    background-position: center center  
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 8px
+                    height: 9px
+                    bottom: 3px
+                    right: 5px
+                    background-image: url('../img/icons/rub__icon_grey.svg')
+                    background-repeat: no-repeat
+                    background-size: cover
+                    background-position: center center  
+        .shares__card_img
+            object-fit: contain
+            margin-top: 7px 
+        .shares__card_title
+            margin-top: 4px
+            padding: 0 24px
+            font-family: 'SFProDisplay-Bold', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            color: #2F3035;
+        .shares__card_term
+            margin-top: 7px
+            background: #F0F0F4;
+            border-radius: 3px;
+            padding: 25px 16px
+            text-align: center
+            font-family: 'SFProDisplay-Regular', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            span
+                font-family: Barlow, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+                color: $akcent;
+            
