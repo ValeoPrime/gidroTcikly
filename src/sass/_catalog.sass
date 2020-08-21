@@ -1,0 +1,79 @@
+.catalog__title
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+.catalog__filters
+    display: flex
+    justify-content: space-between
+    margin-top: 26px
+.catalog__filter_items
+    button
+        display: inline-block
+        padding: 4px 23px
+        font-size: 14px;
+        line-height: 17px;
+        opacity: 0.7;
+        background: #F0F0F4;
+        border-radius: 3px;
+        border: none
+    button + button
+        margin-left: 8px
+.catalog__filters-btns
+    display: flex
+    align-items: center
+    select
+        margin-right: 34px
+    button
+        background-color: transparent
+        border: none
+        cursor: pointer
+        margin: 0
+        padding: 0
+    button + button
+        margin-left: 10px
+.catalog__inner
+    margin-top: 47px
+    display: flex
+    padding-bottom: 100px
+
+.catalog__inner-aside
+    min-width: 290px
+    min-height: 100%
+    border: 1px solid blue
+    margin-right: 10px
+    
+.catalog__inner-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .popular__slider_item
+        margin: 0 0 31px 0
+
+.pagination
+    width: 100%
+    margin-top: 70px
+    .pagination__list
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        li + li
+            margin-left: 10px
+        &-item
+            font-family: Barlow, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            color: #C4C4C4;
+            padding: 8px 15px
+    .active__pag
+        border: 2px solid $akcent;
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: $akcent
+        

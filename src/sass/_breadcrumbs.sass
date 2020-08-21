@@ -1,0 +1,22 @@
+.breadcrumbs
+    font-size: 15px;
+    line-height: 18px;
+    color: #C4C4C4;
+    &__list
+        margin-bottom: 40px
+        display: flex
+    &__list-item
+        padding-right: 16px
+        margin-right: 10px
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            bottom: 3px
+            width: 6px
+            height: 9px
+            right: 0
+            background-image: url('../img/icons/details__right_arrow.svg')
+            background-repeat: no-repeat
+    .breadcrumbs__list-item:last-child::after
+        display: none
