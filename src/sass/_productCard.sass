@@ -1,0 +1,135 @@
+.productCard__inner
+    display: flex
+    justify-content: space-between
+    padding-bottom: 80px
+    .productCard__image-box
+        padding-top: 64px
+        max-width: 500px
+        text-align: center
+        position: relative
+        img
+            max-width: 100%
+        .productCard__oldPrice
+            margin: 17px auto 0
+            font-family: Barlow, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 36px;
+            opacity: 0.6;
+            position: relative
+            display: block
+            max-width: 160px
+            &:before
+                content: ""
+                position: absolute
+                bottom: 5px
+                left: 5px
+                width: 132px
+                height: 21px
+                background-image: url('../img/icons/line-big.svg') 
+    .productCard__newPrice
+        margin-top: 6px
+        font-family: Barlow, sans-serif;;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 48px;
+        
+    .productCard__link
+        display: block
+        margin-top: 17px
+        font-size: 15px;
+        line-height: 18px;
+        color: $akcent;
+.productCard__content-item
+    display: none
+.active__productCard__content-item
+    display: block
+.popular__product_item--saleLarge::before 
+    content: 'SALE';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: .12em;
+    color: #fff;
+    padding: 13px 25px 
+    background-color: $akcent
+    border-radius: 3px;
+.productCard__specisication
+    display: flex
+    flex-direction: column
+    max-width: 570px
+    .productCard__rating-btns
+        display: flex
+        align-items: center
+        a
+            margin-right: 25px
+            display: inline-block
+.productCard__title
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+.productCard__cod
+    margin-top: 10px
+    font-size: 15px;
+    line-height: 18px;
+    opacity: 0.6;
+.productCard__rating-btns
+    margin-top: 27px
+.productCard__tabs
+    margin-top: 50px
+.productCard__tab_item
+    display: inline-block
+    font-size: 20px;
+    line-height: 24px;
+    opacity: 0.6;
+    padding: 5px
+.productCard__tab_item.active_tab
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    opacity: 1
+    font-weight: bold;
+    color: $maincolor
+    border-bottom: 2px solid $akcent;
+    .productCard__tab_item + .productCard__tab_item
+        margin-left: 19px
+.productCard_content
+    margin-top: 20px
+.productCard__content_item
+    font-size: 20px;
+    line-height: 24px;
+    color: $maincolor
+    display: flex
+    justify-content: space-between
+    margin-top: 15px
+    padding-bottom: 6px
+    border-bottom: 1px solid rgba(#2F3035, 0.1) 
+.productCard__content__item-property
+    padding-right: 15px
+.productCard__content__item-value
+    width: 125px
+.productCard__more
+    display: block
+    margin-top: 20px
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: underline;
+    color: $akcent;
+    cursor: pointer
+.productCard__btn
+    margin-top: 45px
+    padding: 16px 53px
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #FFFFFF; 
+    border: none
+    outline: none
+    background-color: $akcent
+    border-radius: 3px
+    cursor: pointer

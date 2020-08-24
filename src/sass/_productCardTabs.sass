@@ -1,0 +1,114 @@
+.productCardTabs__tabs
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(#2F3035, 0.6);
+    padding: 22px 37px 17px
+    background: #F0F0F4;
+    display: flex
+    align-items: center
+    .productCardTabs_item
+        padding-bottom: 5px
+    .productCardTabs_item+.productCardTabs_item
+        margin-left: 73px
+    .active_tab   
+        border-bottom: 2px solid #1C62CD
+        opacity: 1
+.productCardTabs_content
+    .productCardTabs__content-item
+        display: none
+    .active__productCard__content-item
+        display: block
+
+.productCardTabs__form
+    margin-top: 50px
+    padding-left: 38px
+    .productCardTabs__top-line
+        display: flex
+        align-items: center
+        font-size: 17px;
+        line-height: 20px;
+        opacity: 0.7;
+    .productCardTabs__label--search
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            width: 16px
+            height: 16px
+            bottom: 8px
+            right: 11px
+            background-image: url('../img/icons/search.svg')
+            z-index: 5
+        input
+            margin-left: 17px
+            width: 313px
+            height: 33px
+            padding: 9px 37px 9px 17px
+            position: relative
+            border: none
+            background: #F0F0F4;
+            outline: none
+            
+    .productCardTabs__radio-wrap
+        margin-left: 155px
+        input
+            margin: 0
+            margin-right: 15px
+            
+        .productCardTabs__radio + .productCardTabs__radio
+            margin-left: 54px
+        .jq-radio
+            border-radius: 0
+        .jq-radio.checked .jq-radio__div
+            border-radius: 0
+            background-color: $akcent
+        .jq-checkbox.focused, .jq-radio.focused
+            border: none
+    .productCard__list--item:not(nth-firstChild)
+        display: flex
+        padding: 20px 0 20px
+        border-bottom: 1px solid rgba(#2F3035, 0.1);
+        &:first-child
+            border-bottom: none
+    .productCard__list--item
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba($maincolor, 0.7)
+    .productCard__list--Title
+        font-size: 20px;
+        line-height: 24px;
+        padding-bottom: 20px
+        color: $maincolor
+
+        
+    .productCard__list--adress
+        width: 219px
+        margin-right: 81px
+    .productCard__list--workMode
+        width: 157px
+        margin-right: 96px
+        .workMode
+            display: flex
+            justify-content: space-between
+        .workMode + .workMode
+            margin-top: 8px
+    .productCard__list--available
+        width: 110px
+        margin-right: 103px
+    .productCard__list--buy
+        margin-left: auto
+        button
+            opacity: 1
+            padding: 9px 40px
+            font-size: 13px;
+            line-height: 16px;
+            letter-spacing: 0.12em;
+            color: #FFFFFF;
+            background-color: $akcent
+            border: none
+            outline: none
+            border-radius: 3px;
+
+    
+        
+        
