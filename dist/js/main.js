@@ -16,6 +16,18 @@ $(function () {
 
     $('.filter__style').styler()
 
+    $('.catalog__filters-btngrid').on('click', function () {
+        $(this).addClass('catalog__filters-btn-active');
+        $('.catalog__filters-btnline').removeClass('catalog__filters-btn-active');
+        $('.popular__slider_item').removeClass('popular__slider_item-line')
+    })
+
+    $('.catalog__filters-btnline').on('click', function () {
+        $(this).addClass('catalog__filters-btn-active');
+        $('.popular__slider_item').addClass('popular__slider_item-line')
+        $('.catalog__filters-btngrid').removeClass('catalog__filters-btn-active');
+    })
+
     //Дропдауны в фильтре
     $('.title-drop').on('click', function(){
         $(this).toggleClass('title-drop-active');
@@ -24,7 +36,6 @@ $(function () {
 
     $(".js-range-slider").ionRangeSlider({
         type: "double",
-        
     });
 });
 

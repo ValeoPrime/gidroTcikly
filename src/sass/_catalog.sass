@@ -31,8 +31,21 @@
         cursor: pointer
         margin: 0
         padding: 0
+        outline: none
     button + button
         margin-left: 10px
+    .catalog__filters-btngrid
+        margin-left: 34px
+    .catalog__filters-btnline, .catalog__filters-btngrid
+        opacity: 0.3
+    .catalog__filters-btn.catalog__filters-btn-active
+        opacity: 1
+        color: $maincolor
+    .jq-selectbox
+        border: 1.5px solid #D7D9DF;
+        padding: 8px 46px 8px 20px
+    .jq-selectbox__trigger
+        right: -30px
 .catalog__inner
     margin-top: 47px
     display: flex
@@ -41,7 +54,6 @@
 .catalog__inner-aside
     min-width: 290px
     min-height: 100%
-    border: 1px solid blue
     margin-right: 10px
     
 .catalog__inner-list
@@ -50,6 +62,9 @@
     justify-content: space-between
     .popular__slider_item
         margin: 0 0 31px 0
+.popular__slider_item-line
+    min-width: 100%
+
 
 .pagination
     width: 100%
@@ -68,6 +83,7 @@
             line-height: 22px;
             color: #C4C4C4;
             padding: 8px 15px
+            cursor: pointer
     .active__pag
         border: 2px solid $akcent;
         font-family: Barlow;

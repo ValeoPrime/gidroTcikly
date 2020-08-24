@@ -59,9 +59,18 @@
         margin-top: 18px
         padding-bottom: 2px 
         border-bottom: 2px solid $akcent
+    .filter__form__item-input
+        padding: 8px 20px
+        font-size: 12px;
+        line-height: 14px;
+        border: 1px solid #E0E0E0;
+        flex-grow: 1
+        border-radius: 2px
+        margin-top: 20px
     .item-link
         width: 100%
         flex-basis: 100%
+        
     .filter__label
         font-size: 14px;
         line-height: 17px;
@@ -194,10 +203,80 @@
 
 
 
-.title-select
+
 .filter__form__item-select
     display: flex
     align-items: flex-end
     justify-content: space-between
     padding: 0 0 14px
     border-bottom: 2px solid #C4C4C4;
+
+.btn-checked
+    .filter__form__item-content
+        flex-wrap: nowrap
+        justify-content: space-between
+    .filter__form__item-box
+        width: auto
+        margin-right: 10px
+        position: relative
+    .jq-checkbox
+        width: 63px
+        height: 25px
+        background: #F0F0F4;
+        margin-right: 0
+        border: none
+    .jq-checkbox.checked
+        background-color: $akcent
+        border: none
+    .jq-checkbox.checked ~ .btn-checked-text
+        color: #fff
+    .jq-checkbox__div
+        display: none
+    .filter__label
+        font-family: 'SFProDisplay-Bold', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.07em;
+        color: #C4C4C4;
+    .btn-checked-text
+        position: absolute
+        z-index: 5
+        top: 5px
+        left: 50%
+        transform: translateX(-50%)
+
+
+.form__button
+    margin: 40px auto 0
+    display: block
+    text-align: center;
+    outline: none
+    color: #BDBEC2;
+    border: none
+    cursor: pointer
+.form__button-submit
+    padding: 16px 85px
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+.form__button-more, .form__button-reset
+    margin-top: 15px
+    font-size: 13px;
+    line-height: 16px;
+    color: $maincolor
+    background-color: transparent
+.more-params-content
+    text-align: center
+    display: none
+.form__button-more.title-drop:before
+    left: 84%
+    transform: rotate(180deg)
+.form__button-more.title-drop-active:before
+    transform: rotate(0deg)
+.form__button-reset
+    color: #BDBEC2;
+    padding-bottom: 2px 
+    border-bottom: 1px solid #BDBEC2
