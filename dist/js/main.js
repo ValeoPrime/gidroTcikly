@@ -39,12 +39,12 @@ $(function () {
     });
 
 
-    $(".rate-Yo").rateYo({
-        normalFill: "#c4c4c4",
-        ratedFill: "#1C62CD",
-        spacing: "7px",
-        starWidth: "23px"
-    });
+    // $(".rate-Yo").rateYo({
+    //     normalFill: "#c4c4c4",
+    //     ratedFill: "#1C62CD",
+    //     spacing: "7px",
+    //     starWidth: "23px"
+    // });
 
 
 });

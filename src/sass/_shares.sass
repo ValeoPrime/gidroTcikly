@@ -1,9 +1,12 @@
 .shares__inner
     display: flex
     justify-content: space-between
+    transition: 1s
     .shares__slider
         max-width: 870px
         position: relative
+    .shares__slider-img
+        min-height: 383px
     .shares__slider-btn
         position: absolute
         top: 50%
@@ -145,4 +148,47 @@
                 line-height: 22px;
                 text-align: center;
                 color: $akcent;
+@media screen and ( max-width:1200px  )
+    .shares__inner
+        flex-wrap: wrap
+        margin-top: 25px
+        .shares__slider
+            max-width: 650px
+        .shares__slider-img
+            max-width: 650px
+            margin-right: 20px
+@media screen and ( max-width:970px  )
+    .shares__inner
+        flex-wrap: wrap
+        justify-content: center
+        margin-right: 25px
+        .shares__slider-item
+            text-align: center
+        .shares__slider-img
+            margin-bottom: 25px
+        .shares__slider-btnprev, .shares__slider-btnnext
+            display: none !important
+@media screen and ( max-width:640px  )
+    .shares__inner
+        flex-wrap: wrap
+        justify-content: center
+        margin-right: 0
+        .shares__slider
+            max-width: 420px
+        .slick-list
+            max-width: 100%
+        .shares__slider-item
+            text-align: center
+        .shares__slider-img
+            min-height: 164px
+            max-width: 420px
+@media screen and ( max-width:425px  )
+    .shares__inner
+        .shares__slider
+            max-width: 320px
+        .shares__slider-img
+            max-width: 320px
+            
+
+    
             

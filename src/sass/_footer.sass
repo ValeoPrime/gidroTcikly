@@ -1,6 +1,7 @@
 .footer
     padding: 42px 0 27px 0
     background: #F0F0F4;
+    transition: 1s
     .footer__inner
         display: flex
     .footer__form_wrapper
@@ -23,7 +24,7 @@
             border: none
             outline: none
         button
-            padding: 10px 16px
+            padding: 10px 15px
             background-color: $akcent
             border: none
             outline: none
@@ -73,3 +74,36 @@
         margin: 20px
 .show
     top: 50%
+
+@media screen and ( max-width:1130px  )
+    .footer
+        .footer__inner
+            flex-wrap: wrap
+            justify-content: center
+        .footer__item
+            margin-bottom: 25px
+            margin-right: 60px
+        .footer__form_wrapper
+@media screen and ( max-width:600px  )
+    .footer
+        .footer__item
+            margin-right: 30px
+@media screen and ( max-width:400px  )
+    .footer
+        .container
+            padding: 0
+        .footer__form_title
+            text-align: center
+        .footer__item
+            margin-right: 0
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            &:last-child
+                display: flex
+                flex-direction: row
+        .footer__social_wrap
+            justify-content: center
+            
+    
