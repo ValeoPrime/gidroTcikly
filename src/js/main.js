@@ -6,12 +6,55 @@ $(function () {
     });
 
     $('.popular__slider').slick({
-        infinite: true,
-        slidesToShow: 3,
+        // infinite: true,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        initialSlide: -1,
+        arrows: true,
         prevArrow: '<button class="popular__slider-btn popular__slider-btnprev"><img src="img/icons/left__arrow-black.svg" alt=""></button>',
         nextArrow: '<button class="popular__slider-btn popular__slider-btnnext"><img src="img/icons/right__arrow-black.svg" alt=""></button>',
+        responsive: [
+                    {
+                        breakpoint: 1251,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                      }
+                    },
+                    {
+                        breakpoint: 1051,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                      },
+                      {
+                        breakpoint: 751,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                      },
+                      {
+                        breakpoint: 530,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                      },
+                      
+                    ]
     });
     //Стилизация чекбоксов. Селектов. Радио
     $('.filter__style').styler()

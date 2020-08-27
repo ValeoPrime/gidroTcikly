@@ -21,27 +21,6 @@
         z-index: 5
     .shares__slider-btnnext
         right: 20px
-    .slick-dots
-        position: absolute
-        bottom: 40px   
-        left: 50%
-        transform: translateX(-50%)
-        li
-            display: inline-block
-            padding: 0 5px
-        button
-            padding: 0
-            margin: 0
-            font-size: 0
-            width: 11px
-            height: 11px
-            border: 1px solid #FFFFFF;
-            background-color: transparent
-            border-radius: 50%
-            cursor: pointer
-        .slick-active
-            button
-                background-color: #FFFFFF;
 
     .shares__card
         max-width: 265px
@@ -148,6 +127,28 @@
                 line-height: 22px;
                 text-align: center;
                 color: $akcent;
+
+.slick-dots
+    position: absolute
+    bottom: 40px   
+    left: 50%
+    transform: translateX(-50%)
+    li
+        display: inline-block
+        padding: 0 5px
+        button
+            padding: 0
+            margin: 0
+            font-size: 0
+            width: 11px
+            height: 11px
+            border: 1px solid #FFFFFF;
+            background-color: transparent
+            border-radius: 50%
+            cursor: pointer
+        .slick-active
+            button
+                background-color: #FFFFFF;
 @media screen and ( max-width:1200px  )
     .shares__inner
         flex-wrap: wrap

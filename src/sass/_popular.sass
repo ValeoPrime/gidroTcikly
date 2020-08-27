@@ -1,4 +1,4 @@
-.popular__inner
+.container
     padding-top: 80px
 .popular__title
     font-family: Barlow, sans-serif;
@@ -127,7 +127,8 @@
 .popular__slider, .prod__slider
     display: none
 .popular__slider.popular__slider--active
-    display: block
+    display: flex
+    justify-content: space-between
 .popular__slider_item
     position: relative
     max-width: 270px
@@ -168,6 +169,32 @@
         background: #F0F0F4;
 .prod
     margin-bottom: 97px
+
+@media screen and ( max-width:1200px  )
+    .popular__inner
+        overflow-x: scroll
+    .mobile-overflow
+        min-width: 1000px
+    .popular__categories_content
+        .popular__slider_item
+            margin-right: 10px
+        .slick-track
+            display: flex
+            justify-content: space-between
+        .slick-dots
+            position: absolute
+            bottom: -30px
+            li
+                button
+                    background-color: #c4c4c4
+                    width: 15px
+                    height: 15px
+            .slick-active
+                button
+                    background-color: $akcent;
+                    outline: none
+.popular__items-more
+    margin: 50px auto 0 auto
 
 
 
