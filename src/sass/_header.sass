@@ -1,4 +1,34 @@
 .header__top
+    .menu
+        position: relative
+    .menu__mobile
+        display: none
+        position: absolute
+        min-width: 245px
+        background-color: #fff
+        left: -260px
+        z-index: 10
+        transition: 1s
+        li
+            margin-top: 46px
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+            font-family: SF Pro Display, sans-serif;
+            padding-left: 53px
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            position: relative
+            &:last-child
+                font-family: 'SFProDisplay-Bold', sans-serif;
+                font-weight: bold;
+                margin-bottom: 130px
+            img
+                position: absolute
+                bottom: 0
+                left: 10px
+    .menu__mobile-open
+        left: 0px
     &-inner
         display: flex
         justify-content: space-between
@@ -6,6 +36,14 @@
         min-height: 120px
         font-family: 'SFProDisplay-Bold', sans-serif;
         font-weight: 700
+        .menu__gamburger
+            display: none
+            div
+                width: 40px
+                height: 5px
+                background-color: $akcent
+                margin-top: 8px
+                border-radius: 5px
         .menu__list
             .menu__item
                 display: inline-block
@@ -56,15 +94,20 @@
                 align-items: center
 .header__bottom
     margin-bottom: 78px
+    .container
+        padding: 0
 .header__bottom_categories
     display: flex
     justify-content: space-around
     background: #F0F0F4;
     align-items: center
     min-height: 53px
+    .mobile__bottom_listItem
+        display: none
     .header__bottom_listItem
         text-transform: capitalize;
         position: relative
+        
         .list__item-link
             position: absolute  
             top: 50%
@@ -88,5 +131,55 @@
             right: auto
             left: 0
             width: 100%
+
+@media screen and ( max-width:1100px  )
+    .header__top
+        &-inner
+            .menu__list
+                .menu__item
+                    display: inline-block
+                .menu__item + .menu__item
+                    margin-left: 20px
+        .header__wrapper
+            address
+                margin-right: 20px
+@media screen and ( max-width:980px  )
+    .header__top
+        &-inner
+            .menu__gamburger
+                display: block
+            .menu__list
+                display: none
+@media screen and ( max-width:600px  )
+    .header__top
+        &-inner
+            min-height: 100px
+        .menu__mobile
+            display: block
+        .header__wrapper
+            address
+                display: none
+            .user__list
+                margin-right: 0
+    .header__bottom
+        margin-bottom: 78px
+        .container
+            overflow-x: scroll
+            
+    .header__bottom_categories
+        justify-content: start
+        .header__bottom_listItem
+            display: none
+        .mobile__bottom_listItem
+            font-family: 'SFProDisplay-Bold', sans-serif;
+            display: block
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center
+            color: #2F3035;
+            font-weight: bold;
+        .mobile__bottom_listItem + .mobile__bottom_listItem
+            margin-left: 15px
+
 
 

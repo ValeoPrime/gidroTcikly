@@ -76,110 +76,94 @@ $(function () {
         $(this).toggleClass('title-drop-active');
         $(this).next().slideToggle(500)
     })
-
+    // рейнж слайдер
     $(".js-range-slider").ionRangeSlider({
         type: "double",
     });
 
-
-    // $(".rate-Yo").rateYo({
-    //     normalFill: "#c4c4c4",
-    //     ratedFill: "#1C62CD",
-    //     spacing: "7px",
-    //     starWidth: "23px"
-    // });
+    if(document.querySelector('.rate-Yo') !== null){
+        $(".rate-Yo").rateYo({
+            normalFill: "#c4c4c4",
+            ratedFill: "#1C62CD",
+            spacing: "7px",
+            starWidth: "23px"
+        });
+    }
+    
 
 
 });
 
-// ТАБЫ
-const searchTab = document.querySelector('.search__tabs')
+const body = document.querySelector('body')
+const menuMobile = document.querySelector('.menu__mobile')
+
 const tabs = document.querySelectorAll('.search__tab_item')
 const searchContents = document.querySelectorAll('.search__content-item')
-
-if (searchTab !== null) {
-    searchTab.addEventListener('click', (event) => {
-        event.preventDefault()
-        changeTabs(tabs, searchContents, 'active_tab', 'active__search__content-item')
-    })
-}
-
-
-const popularTab = document.querySelector('.popular__categories')
 const populartabs = document.querySelectorAll('.popular__categories_item')
 const popularContents = document.querySelectorAll('.popular__slider')
-
-if (popularTab !== null) {
-    popularTab.addEventListener('click', (event) => {
-        event.preventDefault()
-        changeTabs(populartabs, popularContents, 'active__tab', 'popular__slider--active')
-    })
-}
-
-
-const prodTab = document.querySelector('.prod__categories')
 const prodtabs = document.querySelectorAll('.prod__categories_item')
 const prodContents = document.querySelectorAll('.prod__slider')
-
-if (prodTab !== null) {
-    prodTab.addEventListener('click', (event) => {
-        event.preventDefault()
-        changeTabs(prodtabs, prodContents, 'active__tab', 'popular__slider--active')
-    })
-}
-
-
-const filterTab = document.querySelector('.filter__tabs')
 const filtertabs = document.querySelectorAll('.filter__tabs-link')
 const filterContents = document.querySelectorAll('.filter__tabs_content')
-
-if (filterTab !== null) {
-    filterTab.addEventListener('click', (event) => {
-        event.preventDefault()
-        changeTabs(filtertabs, filterContents, 'active__filter_tab', 'active__filter_content')
-    })
-}
-
-const productCard = document.querySelector('.productCard__tabs')
 const productCardtabs = document.querySelectorAll('.productCard__tab_item')
 const productCardСontent = document.querySelectorAll('.productCard__content-item')
-
-if (productCard !== null) {
-    productCard.addEventListener('click', (event) => {
-        event.preventDefault()
-        changeTabs(productCardtabs, productCardСontent, 'active_tab', 'active__productCard__content-item')
-    })
-}
-
-const productCardT = document.querySelector('.productCardTabs__tabs')
-const productCardTabsitems = document.querySelectorAll('.productCardTabs_item')
+const productCardTabsite = document.querySelectorAll('.productCardTabs_item')
 const productCardTabsContent = document.querySelectorAll('.productCardTabs__content-item')
 
-if (productCardT !== null) {
-    productCardT.addEventListener('click', (event) => {
-        event.preventDefault()
-        changeTabs(productCardTabsitems, productCardTabsContent, 'active_tab', 'active__productCard__content-item')
-    })
-}
+body.addEventListener('click', e => {
+    //Гамбургер меню
+    if(e.target.classList.contains('menu__gamburger') || e.target.parentNode.classList.contains('menu__gamburger')) {
+        e.preventDefault()
+        menuMobile.classList.toggle('menu__mobile-open')
+    }
+    //Табы поиска
+    if(e.target.classList.contains('search__tab_item')) {
+        e.preventDefault()
+        changeTabs(tabs, searchContents, 'active_tab', 'active__search__content-item')
+    }
+    //Табы популярных товаров
+    if(e.target.classList.contains('popular__categories_item')) {
+        e.preventDefault()
+        changeTabs(populartabs, popularContents, 'active__tab', 'popular__slider--active')
+    }
+    //Табы с этим товаром покупают
+    if(e.target.classList.contains('prod__categories_item')) {
+        e.preventDefault()
+        changeTabs(prodtabs, prodContents, 'active__tab', 'popular__slider--active')
+    }
+    //Табы фильтра
+    if(e.target.classList.contains('filter__tabs-link')) {
+        e.preventDefault()
+        changeTabs(filtertabs, filterContents, 'active__filter_tab', 'active__filter_content')
+    }
+    //Табы в карточке продукта
+    if(e.target.classList.contains('productCard__tab_item')) {
+        e.preventDefault()
+        changeTabs(productCardtabs, productCardСontent, 'active_tab', 'active__productCard__content-item')
+    }
+    //Табы в полном описании продукта
+    if(e.target.classList.contains('productCardTabs_item')) {
+        e.preventDefault()
+        changeTabs(productCardTabsite, productCardTabsContent, 'active_tab', 'active__productCard__content-item')
+    }
+})
 
 function changeTabs(tabsArr, contentArr, activeTabClass, activeContClass) {
     if(event.target.getAttribute('href') !== null){
         tabsArr.forEach(item => {
             item.classList.remove(activeTabClass)
         })
-        
         contentArr.forEach(i => {
             i.classList.remove(activeContClass)
-            
                 if (event.target.getAttribute('href').slice(1, 20) == i.id) {
                     i.classList.add(activeContClass)
                 }
-        
         })
     }
-
     event.target.classList.add(activeTabClass)
 }
+
+
 
 //Добавление в избранное
 const cards = document.querySelectorAll('.popular__product_item')
@@ -195,7 +179,6 @@ cards.forEach(item => {
 
 
 
-const body = document.querySelector('body')
 const popup = document.querySelector('.popUp__info')
 if(popup !== null){
     setTimeout(() => {
