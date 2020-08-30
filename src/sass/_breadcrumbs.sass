@@ -5,6 +5,7 @@
     &__list
         margin-bottom: 40px
         display: flex
+        width: 650px
     &__list-item
         padding-right: 16px
         margin-right: 10px
@@ -20,3 +21,11 @@
             background-repeat: no-repeat
     .breadcrumbs__list-item:last-child::after
         display: none
+
+@media screen and ( max-width:650px  )
+    .breadcrumbs
+        .container
+            overflow-x: scroll
+
+        
+    

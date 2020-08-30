@@ -42,6 +42,7 @@
         font-size: 15px;
         line-height: 18px;
         color: $akcent;
+        text-decoration: underline
 .productCard__content-item
     display: none
 .active__productCard__content-item
@@ -58,7 +59,7 @@
     padding: 13px 25px 
     background-color: $akcent
     border-radius: 3px;
-.productCard__specisication
+.productCard__specification
     display: flex
     flex-direction: column
     max-width: 570px
@@ -133,3 +134,33 @@
     background-color: $akcent
     border-radius: 3px
     cursor: pointer
+.productCard__btn-mobile
+    display: none
+    margin: 40 auto
+    width: 100%
+
+@media screen and ( max-width:1200px  )
+    .productCard__inner
+        flex-wrap: wrap
+        justify-content: center
+@media screen and ( max-width:1115px  )
+    .productCard__inner
+        flex-wrap: wrap
+        justify-content: center
+        .productCard__image-box
+            border: 1px solid #808080
+            border-radius: 5px
+        .productCard__title
+            margin-top: 20px
+    
+@media screen and ( max-width:650px  )
+    .productCard__tabs, .productCard_content
+        display: none
+    .productCard__specification
+        order: -1
+        margin-bottom: 20px
+    .productCard__title
+        font-size: 20px;
+        line-height: 24px;
+    .productCard__btn-mobile
+        display: block

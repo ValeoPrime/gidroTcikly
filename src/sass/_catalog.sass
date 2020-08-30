@@ -50,6 +50,8 @@
     margin-top: 47px
     display: flex
     padding-bottom: 100px
+    .aside__btn
+        display: none
 
 .catalog__inner-aside
     min-width: 290px
@@ -59,7 +61,7 @@
 .catalog__inner-list
     display: flex
     flex-wrap: wrap
-    justify-content: space-between
+    justify-content: space-around
     .popular__slider_item
         margin: 0 0 31px 0
 .popular__slider_item-line
@@ -92,4 +94,42 @@
         font-size: 18px;
         line-height: 22px;
         color: $akcent
+
+
+@media screen and ( max-width:980px  )
+    .catalog__filters-btns
+        button
+            display: none
+            
+@media screen and ( max-width:720px  )
+    .catalog__filters
+        flex-wrap: wrap
+        justify-content: start
+    .catalog__filters-btns
+        flex-basis: 50%
+        margin-top: 10px
+        
+    
+
+@media screen and ( max-width:640px  )
+    .catalog__inner
+        flex-wrap: wrap
+        .catalog__inner-aside
+            display: none
+        .aside__btn
+            display: block
+            font-weight: bold
+            padding: 15px 20px
+            color: #ffffff
+            border-radius: 5px
+            background-color: $akcent
+            width: 100%
+            text-align: center
+            margin-bottom: 35px
+    .pagination
+        .pagination__list
+            li + li
+                margin-left: 0
+
+    
         

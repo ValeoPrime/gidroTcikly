@@ -6,10 +6,9 @@
     background: #F0F0F4;
     display: flex
     align-items: center
+    justify-content: space-between
     .productCardTabs_item
         padding-bottom: 5px
-    .productCardTabs_item+.productCardTabs_item
-        margin-left: 73px
     .active_tab   
         border-bottom: 2px solid #1C62CD
         opacity: 1
@@ -22,6 +21,8 @@
 .productCardTabs__form
     margin-top: 50px
     padding-left: 38px
+    .productCard__list--buy--mobile
+        display: none
     .productCardTabs__top-line
         display: flex
         align-items: center
@@ -66,8 +67,9 @@
             border: none
     .productCard__list--item:not(nth-firstChild)
         display: flex
-        padding: 20px 0 20px
+        padding: 20px 0
         border-bottom: 1px solid rgba(#2F3035, 0.1);
+        align-items: center
         &:first-child
             border-bottom: none
     .productCard__list--item
@@ -109,6 +111,88 @@
             outline: none
             border-radius: 3px;
 
+@media screen and ( max-width:1100px  )
+    .productCardTabs__form
+        .productCardTabs__radio-wrap
+            margin-left: 20px
+        .productCard__list--adress
+            margin-right: 40px
+        .productCard__list--available
+            margin-right: 50px
+
+@media screen and ( max-width:955px  )
+    .productCardTabs__form
+        .productCardTabs__top-line
+            flex-wrap: wrap
+        .productCardTabs__radio-wrap
+            margin-left: 20px
+            margin-top: 20px
+            display: flex
+            flex-wrap: wrap
+            .productCardTabs__radio
+                flex-basis: 100%
+                max-width: 235px
+            .productCardTabs__radio + .productCardTabs__radio
+                margin-left: 0
+                margin-top: 10px
+        .productCard__list--workMode
+            margin-right: 30px
+        .productCard__list--available
+            display: none
+    .productCardTabs
+        .productCardTabs__tabs_wrap
+            overflow-x: scroll
+    .productCardTabs__tabs
+        width: 900px
+
+@media screen and ( max-width:700px  )
+    .productCardTabs__form
+        .productCard__list--adress
+            width: 130px
+@media screen and ( max-width:600px  )
+    .productCardTabs__form
+        padding-left: 0
+        .productCard__list--Title
+            font-size: 18px
+            line-height: 20px
+        .productCard__list--adress
+            margin-right: 10px
+        .productCard__list--workMode
+            .workMode
+                flex-wrap: wrap
+                span
+                    flex-basis: 80%
+        .productCard__list--buy
+            display: none
+        .productCard__list--buy--mobile
+            display: block
+            text-align: center
+            margin-top: 10px
+        .productCard__list--item:not(nth-firstChild)
+            padding: 10px 0
+            
+
+@media screen and ( max-width:450px  )
+    .productCardTabs__form
+        margin-top: 20px
+        .productCardTabs__label--search
+            display: none
+        .productCard__list--workMode
+            width: 105px
+        .productCard__list--adress
+            margin-right: 20px
+        .productCard__list--workMode
+            margin-right: 10px
+        .productCard__list--Title
+            font-size: 18px
+            line-height: 20px
+        .productCard__list--item
+            font-size: 14px
+            justify-content: flex-start
+        
+               
+
+    
     
         
         

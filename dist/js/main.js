@@ -76,6 +76,12 @@ $(function () {
         $(this).toggleClass('title-drop-active');
         $(this).next().slideToggle(500)
     })
+
+    //Сворачивание фильтра
+    $('.aside__btn').on('click', function () {
+        $(this).next().slideToggle(500)
+    })
+
     // рейнж слайдер
     $(".js-range-slider").ionRangeSlider({
         type: "double",
@@ -177,17 +183,6 @@ cards.forEach(item => {
     })
 })
 
-
-
-const popup = document.querySelector('.popUp__info')
-if(popup !== null){
-    setTimeout(() => {
-        popup.classList.add('show')
-        setTimeout(() => {
-            popup.classList.remove('show')
-        }, 8000);
-    }, 3000);
-}
 
 
 
